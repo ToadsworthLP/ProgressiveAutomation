@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.vanhal.progressiveautomation.ProgressiveAutomation;
+import com.vanhal.progressiveautomation.compat.mods.AgriCraft;
+import com.vanhal.progressiveautomation.compat.mods.BetterWithMods;
+import com.vanhal.progressiveautomation.compat.mods.IC2;
 import com.vanhal.progressiveautomation.compat.mods.ImmersiveEngineering;
 import com.vanhal.progressiveautomation.compat.mods.MFR;
 import com.vanhal.progressiveautomation.compat.mods.Pams;
@@ -23,14 +26,14 @@ public class ModHelper {
 	private static ArrayList<BaseMod> modsLoaded = new ArrayList<BaseMod>();
 	
 	private static void registerMods() {
+		registerMod(new BetterWithMods());
 		registerMod(new ImmersiveEngineering());
 		registerMod(new Pams());
-		//registerMod(new Pneumaticcraft());
 		registerMod(new MFR());
 		registerMod(new TiCon());
-		//registerMod(new AgriCraft());
-		//registerMod(new GrowOres());
-		//registerMod(new ThaumCraft());
+		registerMod(new AgriCraft());
+
+		registerMod(new IC2());
 
 		
 		//sudo "mod" to attempt to right click on plants before trying to break them
